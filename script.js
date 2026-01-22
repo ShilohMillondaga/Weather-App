@@ -21,26 +21,35 @@ async function getWeather(city) {
         if(data.weather[0].main == "Clouds") {
             if(data.weather[0].icon.includes("d")) {
                 weatherCard.style.background = "linear-gradient(135deg, #57a0ee, #c6deff)"; //cloudy day
+                document.body.style.background = "#e8f1f8";
             } else {
                 weatherCard.style.background = "linear-gradient(135deg, #4286f4, #373B44)"; //cloudy night
+                document.body.style.background = "#1a1a2e";
             }
         } else if(data.weather[0].main == "Clear") {
             if(data.weather[0].icon.includes("d")) {
                 weatherCard.style.background = "linear-gradient(135deg, #ee0979, #ff6a00, #f8b500)"; //clear day (bro i cant find any good gradients hnggg)
+                document.body.style.background = "#fff4e6";
             } else {
                 weatherCard.style.background = "linear-gradient(135deg, #0f0c29, #302b63, #24243e)"; //clear night
+                document.body.style.background = "#0a0a12";
             }
         } else if(data.weather[0].main == "Rain") {
             weatherCard.style.background = "linear-gradient(135deg, #536976, #292E49)"; 
+            document.body.style.background = "#d4d8e3";
         } else if(data.weather[0].main == "Drizzle") {
             weatherCard.style.background = "linear-gradient(135deg, #606c88, #3f4c6b)";
+            document.body.style.background = "#dfe4f0";
         } else if(data.weather[0].main == "Mist") {
             weatherCard.style.background = "linear-gradient(135deg, #606c88, #3f4c6b)";
+            document.body.style.background = "#dfe4f0";
         } else if(data.weather[0].main == "Snow") {
             if(data.weather[0].icon.includes("d")) {
                 weatherCard.style.background = "linear-gradient(135deg, #2C5364, #859398)"; //snow day
+                document.body.style.background = "#e8f0f2";
             } else {
                 weatherCard.style.background = "linear-gradient(135deg, #141E30, #243B55)"; //snow night
+                document.body.style.background = "#0f1620";
             }
         }
 
